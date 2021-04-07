@@ -13,3 +13,15 @@ tags:
     name: markdown
   - slug: karen
     name: karen bot
+  - slug: website
+    name: website
+  - slug: api
+    name: API
+  - slug: music
+    name: music
+  - slug: newsletter
+    name: newsletter
+  - slug: helloworld
+    name: Hello World
+  - slug: minecraft
+    name: Minecraft
