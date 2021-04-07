@@ -1,9 +1,9 @@
 {
-  "short_name": "",
-  "name": "",
+  "short_name": "Exerra Blog",
+  "name": "Exerra Blog",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "https://exerra.xyz/assets/002pfp.png",
       "type": "image/png",
       "sizes": "192x192"
     }
