@@ -15,7 +15,7 @@ import { TwitterTweetEmbed } from "react-twitter-embed";
 import FingerprintJS from '@fingerprintjs/fingerprintjs-pro'
 
 // Initialize an agent at application startup.
-const fpPromise = FingerprintJS.load({ token: 'HNpU5LRQh4h3rZ5fFNrW' })
+const fpPromise = FingerprintJS.load({ token: 'Kmj9uSrpTi6yrwtqL0Jl' })
 
 // Get the visitor identifier when you need it.
 fpPromise
