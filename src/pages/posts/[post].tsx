@@ -12,15 +12,6 @@ import PostLayout from "../../components/PostLayout";
 import InstagramEmbed from "react-instagram-embed";
 import YouTube from "react-youtube";
 import { TwitterTweetEmbed } from "react-twitter-embed";
-import FingerprintJS from '@fingerprintjs/fingerprintjs-pro'
-
-// Initialize an agent at application startup.
-const fpPromise = FingerprintJS.load({ token: 'Kmj9uSrpTi6yrwtqL0Jl' })
-
-// Get the visitor identifier when you need it.
-fpPromise
-  .then(fp => fp.get())
-  .then(result => console.log(result.visitorId))
 
 export type Props = {
   title: string;

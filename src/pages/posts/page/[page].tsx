@@ -8,15 +8,6 @@ import PostList from "../../../components/PostList";
 import config from "../../../lib/config";
 import { countPosts, listPostContent, PostContent } from "../../../lib/posts";
 import { listTags, TagContent } from "../../../lib/tags";
-import FingerprintJS from '@fingerprintjs/fingerprintjs-pro'
-
-// Initialize an agent at application startup.
-const fpPromise = FingerprintJS.load({ token: 'Kmj9uSrpTi6yrwtqL0Jl' })
-
-// Get the visitor identifier when you need it.
-fpPromise
-  .then(fp => fp.get())
-  .then(result => console.log(result.visitorId))
 
 type Props = {
   posts: PostContent[];
