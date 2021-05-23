@@ -3,6 +3,15 @@ import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { SocialList } from "../components/SocialList";
+import FingerprintJS from '@fingerprintjs/fingerprintjs-pro'
+
+// Initialize an agent at application startup.
+const fpPromise = FingerprintJS.load({ token: 'Kmj9uSrpTi6yrwtqL0Jl' })
+
+// Get the visitor identifier when you need it.
+fpPromise
+  .then(fp => fp.get())
+  .then(result => console.log(result.visitorId))
 
 export default function Index() {
   return (
