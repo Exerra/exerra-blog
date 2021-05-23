@@ -11,7 +11,7 @@ import Head from "next/head";
 import FingerprintJS from '@fingerprintjs/fingerprintjs-pro'
 
 // Initialize an agent at application startup.
-const fpPromise = FingerprintJS.load({ token: 'HNpU5LRQh4h3rZ5fFNrW', region: 'eu' })
+const fpPromise = FingerprintJS.load({ token: 'HNpU5LRQh4h3rZ5fFNrW' })
 
 // Get the visitor identifier when you need it.
 fpPromise
