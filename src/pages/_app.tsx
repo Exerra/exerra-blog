@@ -5,5 +5,5 @@ import { AppProps } from "next/app";
 import "../../public/styles/global.css";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return <Component {...pageProps} />;<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "93d7b160ff894240a6430c40d4fb0eb9"}'></script>
 }
