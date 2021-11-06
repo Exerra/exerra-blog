@@ -88,6 +88,32 @@ export default function PostLayout({
           <Copyright />
         </footer>
       </div>
+      <script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://blog.exerra.xyz/posts/${slug}`
+        },
+        "headline": title,
+        "description": description,
+        "image": "",  
+        "author": {
+          "@type": "Person",
+          "name": author
+        },  
+        "publisher": {
+          "@type": "Organization",
+          "name": "Exerra",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://cdn.exerra.xyz/files/png/pfp/png"
+          }
+        },
+        "datePublished": date.toISOString()
+      })}}>
+      </script>
       <style jsx>
         {`
             .container {
