@@ -23,8 +23,22 @@ This section focuses on various things that have happened to Karen Bot
 
 Karen has a twitter now! It just informs about status updates for now, but it may do even more in the future :eyes:
 
-<p><TwitterHashtagButton tag={'KarenBotDiscord'}/></p>
-
 <p><TwitterFollowButton screenName={'KarenBotDiscord'}/></p>
 
-<p><TwitterMentionButton screenName={'KarenBotDiscord'}/></p>
+## Code updates
+
+Karen Bot has not been receiving that many code updates. I've only commited these thngs to the repo:
+
+1. Changed some outdated images that returned a 404 (now hosted on my CDN)
+2. Changed some embed colours
+3. Added a self-hosted GitHub runner that along with a GitHub action automatically deploys code
+
+The GitHub runner was a bit interesting to set up, which I had done because I wanted to change hosting from Heroku to my own VPS. First I needed to create a relatively safe environment for Karen Bot to run in; I accomplished it by creating a new user with barely any permissions that can't do anythin crazy. Then, I had to create a script to launch Karen Bot which was super easy to do with GitHub runners and only took me about 20 mins to create and iron out the imperfections. With this new switch of hosting providers I can ensure that Karen Bot has minimal downtime which most likely only will be due to deploying code. Sadly, though, during the whole process Karen Bot was down for which I apologize, From now on Karen Bot will have minimal downtime.
+
+# API
+
+For those who don't know, my API handles mosf of Karen Bot's tasks alongside with some other comparatively insignificant things.
+
+## Switch from IPv4 to IPv6
+
+So
