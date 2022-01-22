@@ -3,7 +3,7 @@
   "name": "Exerra Blog",
   "icons": [
     {
-      "src": "https://exerra.xyz/assets/002pfp.png",
+      "src": "https://cdn.exerra.xyz/png/pfp.png",
       "type": "image/png",
       "sizes": "192x192"
     }
