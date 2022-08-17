@@ -8,4 +8,53 @@ tags: []
 It has been quite a while since the last update, and of course a bunch has happened.
 
 # Why are some CDN links broken?
+
 ![Gif of a 404 page](https://i0.wp.com/www.silocreativo.com/en/wp-content/uploads/2017/11/diseno-web-404-CSS.gif?resize=600%2C323&quality=100&strip=all&ssl=1)
+
+Back when it was created, my CDN was meant as a quick way of storing files useful for my projects. It still is like that, though I have added stuff for the general public (Beta profiles of Apple OS's and so on). Eventually it grew into what I consider to be critical infrastructure
+
+... and as with all critical infrastructure, eventually something goes wrong.
+
+## What happened
+
+I was clearing out some temporary files and accidentally forgot to add the file to the `rm` command. What should've been `rm -Rf cdn/file.zip` turned out to be `rm -Rf cdn/`. Thankfully, I had a backup, but it was quite old and so a bunch of additions were missing.
+
+## CDN imperfections
+
+As you can see, a quick command can wipe out an *entire* CDN used by a lot of projects. So, what exactly is the issue and are there any other future problems?
+
+### Hosting
+
+The CDN is hosted on a single server along with the API. As it is not the best server, if it gets overloaded for any reason (DDoS (which shouldn't happen due to Cloudflare but whatever), API overloaded, etc) then the CDN gets shut down as well. I have an idea on how to solve this, so keep on reading.
+
+### Backups
+
+A single command wiped out my entire CDN, but what saved me? **A backup!**
+
+Unfortunately, it was quite old and thus a bunch of stuff was missing.
+
+Backups for the CDN are done on Google Drive using rclone. Unfortunately, I am not in the habit of subscribing to every thing I see so I am limited to 15gb which is not ideal for a CDN of around 30gb.
+
+## What can be done?
+
+I am looking into moving the CDN to AWS (S3 + CloudFront) in order to have reliability, idiot-proofing (can't accidentally `rm -Rf` the CDN) and easier backups.
+
+Pricing is quite good as well for (what I think) is usual usage.
+
+> <!--StartFragment-->
+>
+> Tiered price for: 50 GB
+>
+> 50 GB x 0.0240000000 USD = 1.20 USD
+>
+> Total tier cost = 1.2000 USD (S3 Standard storage cost)
+>
+> 50,000 GET requests in a month x 0.00000042 USD per request = 0.021 USD (S3 Standard GET requests cost)
+>
+> 200 GB x 0.0008 USD = 0.16 USD (S3 select returned cost)
+>
+> 1.20 USD + 0.021 USD + 0.16 USD = 1.38 USD (Total S3 Standard Storage, data requests, S3 select cost)
+>
+> **S3 Standard cost (monthly): 1.38 USD**
+>
+> <!--EndFragment-->
