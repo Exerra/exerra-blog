@@ -25,3 +25,5 @@ tags:
     name: Hello World
   - slug: minecraft
     name: Minecraft
+  - slug: npm
+    name: NPM
