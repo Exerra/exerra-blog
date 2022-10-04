@@ -1,4 +1,14 @@
 tags:
+  - slug: project-launch
+    name: Project launch
+  - slug: npm
+    name: NPM
+  - slug: api
+    name: API
+  - slug: karen
+    name: karen bot
+  - slug: website
+    name: website
   - slug: document
     name: document
   - slug: mock
@@ -11,12 +21,6 @@ tags:
     name: mdx
   - slug: markdown
     name: markdown
-  - slug: karen
-    name: karen bot
-  - slug: website
-    name: website
-  - slug: api
-    name: API
   - slug: music
     name: music
   - slug: newsletter
@@ -25,5 +29,3 @@ tags:
     name: Hello World
   - slug: minecraft
     name: Minecraft
-  - slug: npm
-    name: NPM
