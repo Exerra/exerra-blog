@@ -9,6 +9,8 @@ tags:
     name: karen bot
   - slug: website
     name: website
+  - slug: rant
+    name: Rant
   - slug: document
     name: document
   - slug: mock
